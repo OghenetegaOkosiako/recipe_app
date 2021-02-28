@@ -121,7 +121,6 @@ input{
 
 input[type="text"] {
     width: 500px;
-   
     border-bottom-left-radius: 7px;
     
 }
@@ -135,3 +134,5 @@ input[type="submit"]{
     border-bottom-right-radius: 7px;
     color: rgb(83, 79, 78);
 }
+
+

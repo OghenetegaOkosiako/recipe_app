@@ -1,13 +1,125 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-size: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+body {
+  font-size: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    overflow-x: hidden;
+  overflow-x: hidden;
+}
+
+
+#search {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 70px; 
+  
+}
+
+
+input{
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    outline: none;
+    border: 2px solid rgba(83, 79, 78, 0.3);
+}
+input[type="text"] {
+    width: 500px;
+    border-right: none;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+input[type="submit"]{
+    cursor: pointer;
+    background-color: rgb(240, 167, 10);
+    font-weight: bold;
+    margin-left: -6px;
+    border-left: none;
+    color: rgba(83, 79, 78,);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#box_div h1{
+    font-size: 2.2em;
+    margin-bottom: 10px;
+   color: orange; 
+   
+}
+
+#box_div h6 {
     
+    font-style: italic;
+    margin: 60px 0  0;
+}
+
+#food_containner{
+  
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.food{
+    margin: 20px;
+    background-color: rgba(179, 175, 175.0.7);
+    height: 420px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 8px 8px 15px rgb(179, 175, 175);
+}
+
+.food img{
+    height: 300px;
+    width: 95%;
+}
+
+.food h5 {
+    margin: 15px 0;
+}
+
+.food input {
+    border-radius: 10px;
+    border:none;
+    font-size: 0.8em;
+}
+
+#recipe_box{
+    height: 800px;
+    width: 600px;
+    background-color: orange;
+    position: relative;
+    bottom: 45em;
+    margin: auto;
+    border-radius: 10px;
+    padding-top: 10px;
+}
+
+#recipe_box h4{
+    text-align: center;
+  
+}
+
+#recipe_box p:first-of-type{
+    text-align: right;
+    margin-right: 20px;
+    font-size: 2.2em;
+    font-weight: bold;
+  
+}
+
+#recipe_details{
+    padding: 25px;
+    text-align: justify;
 }

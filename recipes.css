@@ -11,7 +11,19 @@ body {
   overflow-x: hidden;
 }
 
+nav {
+    position: relative;
+    top: 25px;
+    right: 0;
+    left: 85%;
+    cursor: pointer;
+}
 
+nav a {
+   text-decoration: none;
+   color: rgb(240, 167, 10);
+   font-weight: 700;
+}
 #search {
   display: flex;
   justify-content: center;
@@ -49,7 +61,7 @@ input[type="submit"]{
 #box_div h1{
     font-size: 2.2em;
     margin-bottom: 10px;
-   color: orange; 
+    color: orange; 
    
 }
 
@@ -96,14 +108,17 @@ input[type="submit"]{
 }
 
 #recipe_box{
-    height: 800px;
-    width: 600px;
+    width: 80%;
+    min-height: 60vh;
     background-color: orange;
-    position: relative;
-    bottom: 45em;
+    position: absolute;
+    top: 15.2em;
+    left: 0;
+    right: 0;
     margin: auto;
     border-radius: 10px;
     padding-top: 10px;
+    display: none;
 }
 
 #recipe_box h4{
@@ -113,13 +128,52 @@ input[type="submit"]{
 
 #recipe_box p:first-of-type{
     text-align: right;
-    margin-right: 20px;
     font-size: 2.2em;
     font-weight: bold;
+    cursor: pointer;
+    width: fit-content;
+    position: relative;
+    right: 0;
+    left: 92%;
+    
+  
+    
   
 }
 
 #recipe_details{
     padding: 25px;
     text-align: justify;
+}
+
+
+@media only screen and (max-width: 800px){
+
+    .food{
+        width: 40%;
+      
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .food{
+        
+        width: 90%;
+    }
+
+    input[type="text"] {
+        width: 250px;
+        
+    }
+
+    input{
+        padding: 5px;
+        font-size: 0.66em;
+       
+    }
+
+    nav{
+        left: 75%
+    }
+       
 }

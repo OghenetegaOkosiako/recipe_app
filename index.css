@@ -125,7 +125,7 @@ input[type="text"] {
     
 }
 
-input[type="submit"]{
+input[type="button"]{
     cursor: pointer;
     background-color: aqua;
     font-weight: bold;

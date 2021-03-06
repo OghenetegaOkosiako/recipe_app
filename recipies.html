@@ -8,14 +8,18 @@
     <link rel="stylesheet" href="recipes.css">
 </head>
 <body>
+    <nav>
+       <a href="index.html"> Home </a>
+    </nav>
     <section>
+        
         <div id="search_section">
             <div id="search">
                 <div id="box_div">
                     <h1> cookMe </h1>
-                    <form>
+                    <form onsubmit="searchBtn(event)"> 
                         <input type="text" name="search_box" id="search_box" placeholder="Enter food name to search for the recipe">
-                        <input type="submit" value="search">
+                        <input type="submit" value="search" >
                     </form>
                     <h6>Search Results:</h6>
                 </div>
@@ -24,50 +28,18 @@
         <main>
             <div id="food_containner">
 
-                <div class="food">
-                    <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=653&q=80" alt="first food"/>
-                    <h5>Eggs</h5>
-                    <input type="submit" value="see recipe">
-                 </div>
-
-                 <div class="food">
-                    <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=653&q=80" alt="first food"/>
-                    <h5>Eggs</h5>
-                    <input type="submit" value="see recipe">
-                 </div>
-
-                 <div class="food">
-                    <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=653&q=80" alt="first food"/>
-                    <h5>Eggs</h5>
-                    <input type="submit" value="see recipe">
-                 </div>
-                 <div class="food">
-                    <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=653&q=80" alt="first food"/>
-                    <h5>Eggs</h5>
-                    <input type="submit" value="see recipe">
-                 </div>
-
-                 <div class="food">
-                    <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=653&q=80" alt="first food"/>
-                    <h5>Eggs</h5>
-                    <input type="submit" value="see recipe">
-                 </div>
-
-                 <div class="food">
-                    <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=653&q=80" alt="first food"/>
-                    <h5>Eggs</h5>
-                    <input type="submit" value="see recipe">
-                 </div>
+               
                 
             </div>
             <div id="recipe_box">
-                <p>&#120;</p>
+                <p onclick="closeRecipe()">&#120;</p>
                 <h4>Eggs</h4>
                 <p id="recipe_details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut necessitatibus
                      cupiditate deleniti quod architecto expedita nulla neque sapiente accusantium corporis ducimus optio natus ullam, 
                      eum adipisci excepturi reprehenderit dolorum veritatis.</p>
-            </div>
+                    </div>
         </main>
     </section>
+    <script src="index.js"></script>
 </body>
 </html>

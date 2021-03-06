@@ -38,15 +38,20 @@
         <a class="next" onclick="next()">&#10095;</a>
         <a class="prev" onclick="prev()">&#10094;</a>
     </div>
+    <div>
+        <div id="scroll">
+            
+        </div>
+    </div>
     </section>
     <section>
         <div id="search_section">
             <div id="search">
                 <div id="box_div">
-                    <h1> cookMe </h1>
+                    <h1> cookMe </h1> 
                     <form>
-                        <input type="text" name="search_box" id="search_box" placeholder="Enter food name to search for the recipe">
-                        <input type="submit" value="search">
+                        <input type="text" name="first_search_box" id="first_search_box" placeholder="Enter food name to search for the recipe" class="home_search">
+                        <a href="recipies.html"><input type="button" value="search" onclick="firstInput(event)"> </a>
                     </form>
                 </div>
             </div>

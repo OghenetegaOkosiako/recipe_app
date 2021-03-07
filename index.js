@@ -2,8 +2,6 @@
 
 //image slider 
 let slideIndex = 0;
-let firstSearch;
-
 
 function next(){
     showSlide( slideIndex += 1)
@@ -34,7 +32,7 @@ setInterval(() => {
     next();
 }, 5000);
 
-//close recepi page
+//close recepi div
 
 let recipeBox = document.getElementById("recipe_box");
 
@@ -42,19 +40,35 @@ function closeRecipe() {
     recipeBox.style.display = "none";
 }
 
+//Homescreen redirect 
+
+
+function firstInput(e){
+    e.preventDefault();
+    localStorage.setItem("firstSearchInput", document.querySelector("#first_search_box").value)
+    window.location.href = "/recipies.html";
+}
 
 //API Search 
 
 function searchBtn(e) {
-
-   e.preventDefault();
+    if(e) {
+        e.preventDefault();
+    }
    
+
+    let firstSearchInput = localStorage.getItem("firstSearchInput");
     let html = document.getElementById("food_containner");
     html.innerHTML = "";
 
     let foodName =  document.querySelector("#search_box").value;
 
-    if(foodName){ 
+    if(firstSearchInput) {
+        foodName = firstSearchInput;
+        localStorage.setItem("firstSearchInput", "");
+    }
+
+    if( foodName){ 
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s= ${foodName}`)
         .then(response => response.json())
         .then(data => {
@@ -78,7 +92,6 @@ function searchBtn(e) {
            
         })
     }
-  
 }
 
 //Recipe Details
@@ -87,13 +100,11 @@ function seeRecipe(){
     recipeBox.style.display = "block";
 }
 
-//Homescreen redirect 
-
-
-function firstInput(){
-    firstSearch = document.querySelector("#first_search_box").value;
-
-    console.log()
-
+function load(){
+    searchBtn();
 }
+
+
+
+
 

@@ -22,7 +22,8 @@ body{
 
 .my_slide{
     display: none;
-    
+    animation: slideIn 3s;
+    position: relative;
 }
 
 #slides_container{
@@ -70,6 +71,45 @@ body{
     font-size: 1.2em;
    
 }
+
+#scroll {
+    height: 80px;
+    width: 40px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    border-radius: 20px;
+    border: 2px solid rgba(79, 191, 219, 0.5);
+   
+}
+
+#scroll_ball {
+    height: 20px;
+    width: 10px;
+    background-color: rgba(199, 209, 209, 0.5);
+    border-radius: 20%;
+    margin: auto;
+    animation: scroll 3s infinite ;
+}
+
+@keyframes slideIn {
+0% {
+    right: -20px;
+}
+40% {
+    right: 0;
+}
+
+1000%{
+    right: 100%;
+}
+}
+@keyframes scroll {
+    to {
+        transform: translate(0, 60px) scale(1.3, 0);
+      }
+}
+
 
 /* Search section styles*/
 
@@ -133,6 +173,32 @@ input[type="button"]{
    
     border-bottom-right-radius: 7px;
     color: rgb(83, 79, 78);
+}
+
+@media screen and (max-width: 800px){
+
+    .food_quote {
+        
+        font-size: 1.0em;
+       
+    }
+
+    input[type="text"] {
+        width: 300px;
+        
+    }
+
+    input{
+        
+        font-size: 0.78em;
+    }
+
+    #scroll {
+      
+        top: 88%;
+        
+       
+    }
 }
 
 
